@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import AdminDashboard from './components/AdminDashboard';
+import ManageUsers from './components/ManageUsers';
+import ManageProducts from './components/ManageProducts';
+import Sidebar from './components/Sidebar';
+import Header from './components/Header';
+import './App.css'; // Nếu có file CSS cho App
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <Sidebar />
+      <main className="main-content"> {/* Thêm class cho phần nội dung chính */}
+        <Routes>
+          <Route path="/dashboard" element={<AdminDashboard />} />
+          <Route path="/users" element={<ManageUsers />} />
+          <Route path="/products" element={<ManageProducts />} />
+          {/* Thêm các route khác nếu cần */}
+        </Routes>
+      </main>
+    </Router>
   );
-}
+};
 
 export default App;

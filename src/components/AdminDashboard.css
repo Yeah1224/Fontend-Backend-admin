@@ -1,0 +1,63 @@
+/* AdminDashboard.css */
+.admin-dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full height */
+  font-family: 'Monsterat', sans-serif; /* Chọn font chữ */
+  margin-left: 250px; /* Đẩy nội dung bên phải tương ứng với chiều rộng của sidebar */
+  transition: margin-left 0.3s; /* Hiệu ứng chuyển tiếp khi sidebar mở/đóng */
+
+}
+
+.dashboard-main {
+  padding: 20px;
+  flex: 1; /* Lấp đầy không gian còn lại */
+}
+
+.dashboard-cards {
+  display: flex;
+  justify-content: space-between; /* Căn giữa các thẻ thông tin */
+  gap: 20px; /* Khoảng cách giữa các thẻ */
+  margin-bottom: 20px; /* Khoảng cách phía dưới */
+}
+
+.dashboard-card {
+  border-radius: 8px; /* Bo tròn các góc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+  padding: 20px; /* Padding bên trong */
+  flex: 1; /* Lấp đầy không gian đều */
+  display: flex;
+  align-items: center; /* Căn giữa nội dung theo chiều dọc */
+  transition: transform 0.3s; /* Hiệu ứng khi hover */
+  color: white; /* Màu chữ trắng */
+}
+.card-orders {
+  background-color: #3498db; /* Màu nền cho thẻ Total Orders (xanh dương) */
+}
+
+.card-users {
+  background-color: #e67e22; /* Màu nền cho thẻ Total Users (cam) */
+}
+
+.card-income {
+  background-color: #2ecc71; /* Màu nền cho thẻ Total Income (xanh lá) */
+}
+.dashboard-card:hover {
+  transform: scale(1.05); /* Phóng to một chút khi hover */
+}
+
+.dashboard-icon {
+  font-size: 30px; /* Kích thước biểu tượng */
+  color: white; /* Màu của biểu tượng */
+  margin-right: 15px; /* Khoảng cách giữa biểu tượng và văn bản */
+}
+
+h3 {
+  margin: 0; /* Bỏ margin cho h3 */
+  font-size: 24px; /* Kích thước chữ */
+}
+
+p {
+  margin: 5px 0 0; /* Bỏ margin cho p */
+  color: white; /* Màu chữ nhạt hơn cho văn bản phụ */
+}
