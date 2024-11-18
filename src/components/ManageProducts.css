@@ -101,3 +101,17 @@
 .close-button:hover {
     opacity: 0.9; /* Giảm độ mờ khi hover */
 }
+
+.product-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .image-preview {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-top: 10px;
+  }

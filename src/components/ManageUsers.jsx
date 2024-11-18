@@ -3,7 +3,7 @@ import './ManageUsers.css';
 import axios from 'axios'; 
 
 const ManageUser = () => {
-  const [accounts, setAccounts] = useState([]); // Thay đổi tên state thành accounts
+  const [accounts, setAccounts] = useState([]); 
 
   useEffect(() => {
     const fetchAccounts = async () => {
@@ -35,8 +35,8 @@ const ManageUser = () => {
         <table>
           <thead>
             <tr>
-              <th>First Name</th> 
-              <th>Last Name</th>
+              <th>Last Name</th> 
+              <th>First Name</th>
               <th>Email</th>
               <th>Total Orders</th>
               <th>Actions</th>
@@ -45,8 +45,8 @@ const ManageUser = () => {
           <tbody>
             {accounts.map(account => ( 
               <tr key={account.acc_id}> 
-                <td>{account.first_name}</td>  
-                <td>{account.last_name}</td>
+                <td>{account.last_name}</td>  
+                <td>{account.first_name}</td>
                 <td>{account.email}</td>
                 <td>{account.totalOrders}</td>
                 <td>
